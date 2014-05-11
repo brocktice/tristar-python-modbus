@@ -8,6 +8,14 @@
 import time
 counter = 0
 
+import sys
+
+if len(sys.argv) <= 1:
+    print "Usage: read_registers.py <ip address 1> [ip address 2] ..."
+    exit(1)
+
+hosts = sys.argv[1:]
+
 # import the server implementation
 from pymodbus.client.sync import ModbusTcpClient as ModbusClient
 
@@ -16,8 +24,6 @@ import logging
 logging.basicConfig()
 log = logging.getLogger('./modbus.error')
 log.setLevel(logging.ERROR)
-
-hosts = ['192.168.1.2']
 
 for host in hosts:
  print "Host %s" % host
