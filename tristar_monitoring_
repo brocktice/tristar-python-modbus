@@ -1,0 +1,16 @@
+#!/bin/bash
+
+HOSTNAME=`echo ${BASH_SOURCE[0]} | sed -r 's/^.*tristar_monitoring_(.*)$/\1/'`
+#printf "host_name %s\n" ${HOSTNAME}
+
+case $1 in
+     config)
+	echo host_name ${HOSTNAME}
+	echo graph_title Panel Voltage
+	echo graph_vlabel voltage
+	echo voltage.label V
+	exit 0;;
+esac
+
+printf "voltage.value "
+/usr/local/bin/read_registers.py "${HOSTNAME}" | grep 'array voltage' | sed -r "s/^array voltage: +(.*)/\1/"
