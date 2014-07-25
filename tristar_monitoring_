@@ -60,7 +60,7 @@ client.connect()
 state = ['Start', 'Night Check', 'Disconnected', 'Night', 'Fault!', 'MPPT', 'Absorption', 'FloatCharge', 'Equalizing', 'Slave']
 
 # read registers. Start at 0 for convenience
-rr = client.read_holding_registers(0,80,1)
+rr = client.read_holding_registers(0,80,unit=1)
 
 # for all indexes, subtract 1 from what's in the manual
 V_PU_hi = rr.registers[0]
