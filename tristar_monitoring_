@@ -33,14 +33,16 @@ if len(sys.argv) == 2:
         print "hsTemp.critical :80"
 	print "battTemp.label battery temperature (C)"
 	print "battTemp.max 120"
+        print "battTemp.warning :80"
+        print "battTemp.critical :100"
 	print "aPanel.label panel current (A)"
 	print "aPanel.max 20"
-        print "aPanel.warning :15"
-        print "aPanel.critical :19"
+#        print "aPanel.warning :15"
+#        print "aPanel.critical :19"
 	print "aBatt.label battery current (A)"
 	print "aBatt.max 20"
-        print "aBatt.warning :15"
-        print "aBatt.critical :19"
+#        print "aBatt.warning :15"
+#        print "aBatt.critical :19"
         exit(0)
 # import the server implementation
 from pymodbus.client.sync import ModbusTcpClient as ModbusClient
