@@ -35,12 +35,12 @@ if len(sys.argv) == 2:
 	# print "battTemp.max 120"
         # print "battTemp.warning :80"
         # print "battTemp.critical :100"
-	print "aPanel.label panel current (A)"
+	print "aPanel.label charge current (A)"
 	print "aPanel.max 20"
 #        print "aPanel.warning :15"
 #        print "aPanel.critical :19"
-	print "aBatt.label battery current (A)"
-	print "aBatt.max 20"
+#	print "aBatt.label battery current (A)"
+#	print "aBatt.max 20"
 #        print "aBatt.warning :15"
 #        print "aBatt.critical :19"
         exit(0)
@@ -85,7 +85,7 @@ battsV = rr.registers[8] * v_scale
 #battsV = ( rr.registers[8] * 96.667 ) / 32768
 #battsSensedV = rr.registers[26] * v_scale
 battsI = rr.registers[12] * i_scale * 4.75
-arrayV = rr.registers[10] * v_scale
+arrayV = rr.registers[10] * array_scale
 arrayI = rr.registers[11] * i_scale
 #statenum = rr.registers[50]
 hsTemp = rr.registers[14] 
