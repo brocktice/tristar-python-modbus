@@ -102,7 +102,7 @@ hsTemp = rr.registers[14]
 #led_state = rr.registers
 print "vBattTerm.value %.2f" % battsV
 #print "vBattSense.value %.2f" % battsSensedV
-print "aBatt.value %.2f" % battsI
+#print "aBatt.value %.2f" % battsI
 #print "battery watts:   %.2f" % (battsV*battsI)
 print "vPanel.value %.2f" % arrayV
 print "aPanel.value %.2f" % arrayI
