@@ -5,6 +5,8 @@
 # and heavily modified version of the script here
 # http://www.fieldlines.com/index.php?topic=147639.0
 
+# This is modified for the non-MPPT tri-stars without built-in network monitoring. It has different indices and different available data.
+
 import sys
 import re
 import time
