@@ -98,7 +98,7 @@ hsTemp = rr.registers[14]
 #maxVb_daily = rr.registers[65] * v_scale
 #minTb_daily = rr.registers[71]
 #maxTb_daily = rr.registers[72]
-#dipswitches = bin(rr.registers[48])[::-1][:-2].zfill(8)
+dipswitches = bin(rr.registers[25])[::-1][:-2].zfill(8)
 #led_state = rr.registers
 print "vBattTerm.value %.2f" % battsV
 #print "vBattSense.value %.2f" % battsSensedV
@@ -116,7 +116,7 @@ print "state:           %s" % state[statenum]
 #print "max Vb daily:    %0.2f" % maxVb_daily
 #print "min Tb daily:    %0.2f" % minTb_daily
 #print "max Tb daily:    %0.2f" % maxTb_daily
-#print "dipswitches:     %s" % dipswitches
-#print "dipswitches:     12345678"
+print "dipswitches:     %s" % dipswitches
+print "dipswitches:     12345678"
 #print ""
 client.close()
