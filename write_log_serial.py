@@ -60,5 +60,5 @@ hsTemp = rr.registers[14]
 # configuration dipswitches
 dipswitches = bin(rr.registers[25])[::-1][:-2].zfill(8)
 
-print "%s vB: %.2f\tvP: %.2f\tcC: %.2f\t P: %.2f\tS: %s" % (time.strftime("%Y-%m-%dT%H%M%S%Z"), battsV, arrayV, arrayI, battsV*arrayI, state[statenum]) 
+print "%s B: %.2fV\tP: %.2fV\tC: %.2fA\tPow: %.2fW\tS: %s" % (time.strftime("%Y-%m-%dT%H:%M:%S%Z"), battsV, arrayV, arrayI, battsV*arrayI, state[statenum]) 
 client.close()
